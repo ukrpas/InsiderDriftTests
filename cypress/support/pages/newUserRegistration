@@ -1,7 +1,10 @@
+/// <reference types="Cypress" />
 export class NewUserRegistration {
 
     checkBlurOnRegistration() {
-        cy.get('[name="user_first_name"').focus().blur();
+
+        checkSomething.focus().blur();
+        // cy.get('[name="user_first_name"').focus().blur();
         cy.get('[name="user_email"').focus().blur();
         cy.get('[name="user_last_name').focus().blur();
         cy.get('[name="mepr_user_password"]').focus().blur();
@@ -12,6 +15,11 @@ export class NewUserRegistration {
         cy.get('.mepr_email > .mp-form-label > .cc-error').should('have.text', 'Invalid Email');
         cy.get('.mepr_last_name > .mp-form-label > .cc-error').should('have.text', 'Last Name Required');
         cy.get('.mepr-form-has-errors').should('have.text', 'Please fix the errors above');
+    }
+
+    checkSomething() {
+        cy.get('[name="user_first_name"');
+
     }
 
 }

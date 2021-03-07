@@ -24,7 +24,7 @@ it ('register new user', () => {
 
 })
 
-it.only ('check if password is mismatch', () => {
+it ('check if password is mismatch', () => {
     basePage.open('https://insider.drift.com/register/free/')
     newUserRegistration.newUserRegistrationFlow('testFirstName', 'testLastname', 'test@test.com', '1', '2');
     basePage.clickOnCreateNewAccount();

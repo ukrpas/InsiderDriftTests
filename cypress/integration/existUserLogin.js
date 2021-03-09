@@ -12,3 +12,9 @@ it ('check the checkbox Remember me unchecked by default', () =>{
     loginPage.checkRememberMeIsUnchecked();
 })
 
+it.only('check Forgot password exist and you can click on it and check negative scenario with non exist user and after with exist user', () => {
+    basePage.open('/login/?redirect_to=https%3A%2F%2Finsider.drift.com%2Flogin%2F')
+    loginPage.checkRememberPass('a', 'cypresstest@cy.test');
+    
+})
+

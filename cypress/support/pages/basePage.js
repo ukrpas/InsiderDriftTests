@@ -1,7 +1,7 @@
 export class BasePage {
 
       open(url){
-        cy.visit(url);
+        cy.visit(Cypress.config().baseUrl + url);
             }
       
       clickOnCreateNewAccount() {

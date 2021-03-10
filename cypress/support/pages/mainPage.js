@@ -12,13 +12,14 @@ checkLinks() {
 }
 searchForExistItem(existitem) {
     cy.get('#masthead').find('#primary-menu').find('li').eq(4).click()
-    .get('.search-field').focus().type(existitem).click()
-    .url().should('include', '/?s=drift')
+    .get('.search-field').focus().type(existitem).get('[type="submit"]').click()
+    .url().should('include', '?s=Drift')
+
 }
 searchForNonExistItem(nonExistItem) {
     cy.get('#masthead').find('#primary-menu').find('li').eq(4).click()
     .get('.search-field').focus().type(nonExistItem).get('[type="submit"]').click()
-    .get('[id="main"]').find('.page-title').should('have.text', 'Nothing Foundy')
+    .get('[id="main"]').find('.page-title').should('have.text', 'Nothing Found')
 }
 }
 

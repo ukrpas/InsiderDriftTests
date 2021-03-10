@@ -12,10 +12,14 @@ checkLinks() {
 }
 searchForExistItem(existitem) {
     cy.get('#masthead').find('#primary-menu').find('li').eq(4).click()
-    cy.get('.search-field').focus().type('Drift').click()
-    cy.url().should('include', '/?s=drift')
+    .get('.search-field').focus().type(existitem).click()
+    .url().should('include', '/?s=drift')
 }
-
+searchForNonExistItem(nonExistItem) {
+    cy.get('#masthead').find('#primary-menu').find('li').eq(4).click()
+    .get('.search-field').focus().type(nonExistItem).get('[type="submit"]').click()
+    .get('[id="main"]').find('.page-title').should('have.text', 'Nothing Foundy')
+}
 }
 
 export const mainPage = new MainPage()

@@ -1,6 +1,4 @@
 {
     "ignoreTestFiles" : "**/examples/*",
-    "baseUrl" : "https://insider.drift.com/",
-    "pageLoadTimeout": 200000
-
+    "baseUrl" : "https://insider.drift.com/"
 }

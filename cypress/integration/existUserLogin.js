@@ -25,5 +25,4 @@ it ('check links after login', () => {
     loginPage.checkIsSubscribtionIsActive();
     basePage.open('/account/?action=payments')
     loginPage.checkIsUserHaveInvoice()
-    
-})
+ })

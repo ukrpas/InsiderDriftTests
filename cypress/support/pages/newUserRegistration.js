@@ -24,6 +24,10 @@ export class NewUserRegistration {
         cy.get('[name="mepr_user_password"]').type(userPassword);
         cy.get('[name="mepr_user_password_confirm"]').type(confirmUserPassword)
     }
+    checkForMismatchPass() {
+        cy.get('[name="mepr_user_password_confirm"]').focus().blur()
+        .get('.mepr-form-has-errors').should('have.text', 'Please fix the errors above')
+    }
 }
 
 export const newUserRegistration = new NewUserRegistration()

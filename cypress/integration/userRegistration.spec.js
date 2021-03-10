@@ -24,10 +24,9 @@ it ('register new user', () => {
 
 })
 
-it ('check if password is mismatch', () => {
+it ('check for Error message if password is mismatch and confirm password input has blur', () => {
     basePage.open('register/free/')
     newUserRegistration.newUserRegistrationFlow('testFirstName', 'testLastname', 'test@test.com', '1', '2');
     basePage.clickOnCreateNewAccount();
-    cy.get('[name="mepr_user_password_confirm"]').focus().blur();
-    cy.get('.mepr-form-has-errors').should('have.text', 'Please fix the errors above')
+    newUserRegistration.checkForMismatchPass()
 })

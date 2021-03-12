@@ -1,4 +1,8 @@
 {
     "ignoreTestFiles" : "**/examples/*",
-    "baseUrl" : "https://insider.drift.com/"
+    "baseUrl" : "https://insider.drift.com/",
+    "reporter": "nyan"
+       
 }
+       
+

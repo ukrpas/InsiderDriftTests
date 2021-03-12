@@ -5,3 +5,5 @@ see https://docs.cypress.io/guides/getting-started/installing-cypress.html#npm-i
 
 Run tests:
 npx cypress open
+or:
+npx cypress run --reporter nyan

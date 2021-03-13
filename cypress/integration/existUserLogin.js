@@ -1,6 +1,13 @@
 import { basePage } from "../support/pages/basePage";
 import { loginPage} from "../support/pages/loginPage";
 
+describe('Login with existing user', () => {
+
+    beforeEach(() => {
+             cy.clearData();
+    })
+        
+
 it ('login with existing user', () => {
     basePage.open('/login/?redirect_to=https%3A%2F%2Finsider.drift.com%2Flogin%2F')
     loginPage.checkSuccessLogin('cypresstest@cy.test', '1')
@@ -25,4 +32,6 @@ it ('check links after login', () => {
     loginPage.checkIsSubscribtionIsActive();
     basePage.open('/account/?action=payments')
     loginPage.checkIsUserHaveInvoice()
+    
+    })
  })

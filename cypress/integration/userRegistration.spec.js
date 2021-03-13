@@ -1,6 +1,11 @@
 import { basePage } from "../support/pages/basePage";
 import {newUserRegistration} from "../support/pages/newUserRegistration";
 
+describe('new user registration', () => {
+
+    beforeEach(() => {
+         cy.clearData();
+    })
 
 it ('check the blur if nothing is added on new user registration', () => {
 
@@ -29,4 +34,6 @@ it ('check for Error message if password is mismatch and confirm password input 
     newUserRegistration.newUserRegistrationFlow('testFirstName', 'testLastname', 'test@test.com', '1', '2');
     basePage.clickOnCreateNewAccount();
     newUserRegistration.checkForMismatchPass()
+ 
+    })
 })

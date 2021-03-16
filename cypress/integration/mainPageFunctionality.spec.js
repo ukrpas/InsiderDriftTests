@@ -3,7 +3,7 @@ import { basePage } from "../support/pages/basePage";
 import { loginPage} from "../support/pages/loginPage";
 import { mainPage } from "../support/pages/mainPage";
 
-describe('Main oage functionality - links are working, searc etc. ', () => {
+describe('Main page functionality - links are working, search etc. ', () => {
 
     beforeEach(() => {
          cy.clearData();

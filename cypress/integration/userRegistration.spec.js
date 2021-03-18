@@ -24,7 +24,7 @@ it ('check for messages if empty inputs', () => {
 it ('register new user', () => {
 
     basePage.open('register/free/')
-    newUserRegistration.newUserRegistrationFlow('testFirstName', 'testLastname', 'test@test.com', '1', '1');
+    newUserRegistration.newUserRegistrationFlow('testFirstName', 'testLastName', 'test@test.com', '1', '1');
     basePage.clickOnCreateNewAccount();
 
 })

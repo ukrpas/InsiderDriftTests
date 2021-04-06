@@ -9,7 +9,7 @@
   "author": "ukrpas",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^6.8.0",
+    "cypress": "^7.0.0",
     "karma-nyan-reporter": "^0.2.5"
   },
   "dependencies": {}

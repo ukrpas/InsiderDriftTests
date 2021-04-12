@@ -7,14 +7,13 @@ describe ('Check community page functionality', () => {
         basePage.visitCommunityPage();
 })
 it ('Sign in buttons are exist', () => {
-    
-    
+        
     communityPage.checkForSignInBtns();
 
 })
 
 it ('Register buttons are exist', () => {
+    
     communityPage.checkForRegisterBtns();
 })
-
 })

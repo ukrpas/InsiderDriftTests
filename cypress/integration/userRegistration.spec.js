@@ -21,14 +21,8 @@ it ('check for messages if empty inputs', () => {
 })
 
 it ('register new user', () => {
-<<<<<<< HEAD
-
-    basePage.open('register/free/')
-    newUserRegistration.newUserRegistrationFlow('testFirstName', 'testLastName', 'test@test.com', '1', '1');
-=======
    
     newUserRegistration.newUserRegistrationFlow('testFirstName', 'testLastname', 'test@test.com', '1', '1');
->>>>>>> communityDrift
     basePage.clickOnCreateNewAccount();
 
 })

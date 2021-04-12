@@ -16,4 +16,8 @@ it ('Register buttons are exist', () => {
     
     communityPage.checkForRegisterBtns();
 })
+
+it ('checkSearch', () => {
+    communityPage.checkForSearch();
+})
 })

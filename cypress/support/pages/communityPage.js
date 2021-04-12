@@ -2,12 +2,19 @@
 export class CommunityPage {
 
 
-    checkSignIn() {
+    checkForSignInBtns() {
 
        cy.get('[id="MainHeader"]').find('.SignInLinks').
        should('contain.text', 'Sign In')
        cy.get('.Primary').
        should('contain.text', 'Sign In')
+    }
+
+    checkForRegisterBtns() {
+        cy.get('[id="MainHeader"]').find('.SignInLinks').
+       should('contain.text', 'Register')
+       cy.get('.P > .ApplyButton').
+       should('contain.text', 'Register')
     }
 
 }

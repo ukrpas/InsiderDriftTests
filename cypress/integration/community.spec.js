@@ -4,12 +4,17 @@ import { basePage } from "../support/pages/basePage";
 describe ('Check community page functionality', () => {
     beforeEach(() => {
         cy.clearData();
+        basePage.visitCommunityPage();
 })
 it ('Sign in buttons are exist', () => {
     
-    basePage.visitCommunityPage();
-    communityPage.checkSignIn();
+    
+    communityPage.checkForSignInBtns();
 
+})
+
+it ('Register buttons are exist', () => {
+    communityPage.checkForRegisterBtns();
 })
 
 })

@@ -8,6 +8,10 @@ export class BasePage {
         cy.get('.mepr-submit').click();
       }
 
+      visitCommunityPage() {
+        cy.visit(Cypress.config().communityURL)
+      }
+
 }
 
 
